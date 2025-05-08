@@ -1,4 +1,5 @@
 # Python script for my pipeline
+# This code should perform several phylogenomic analysis steps 
 
 # Import needed modules
 import os
