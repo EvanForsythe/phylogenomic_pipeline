@@ -10,7 +10,97 @@ from Bio import SeqIO
 from Bio.Seq import Seq
 from Bio import Phylo
 
+# Store the path to the directory containing input files
+in_dir="/shared/forsythe/BB485/Week06/Brass_CDS_seqs/"
+print(in_dir)
 
+
+# Store the path to a new folder where we want to write the output
+out_dir="/scratch/forsythe/BB485/Week06/phy_pipeline_output/"
+print(out_dir)
+
+
+# Get a list of all fasta files in the input folder
+all_in_files=glob.glob(in_dir+"*fasta")
+
+# start a for-loop to loop through each file name, Inside of the loop:
+    # create a mafft command for the file of interest
+    # Call that mafft command from the command line using system call
+
+for file in all_in_files[0:10]: # remember to remove this for the full run
+    print(file)
+    new_file_path = file.replace(in_dir, out_dir)
+    print(new_file_path)
+
+    # Create a command string (this is what get called using the 'system call'.
+    aln_cmd = 'mafft --auto --quiet '+file+' > '+new_file_path
+    print(aln_cmd)
+
+    #Run the command
+    os.system(aln_cmd) #Uncomment this once you've double-checked that it's looking good.
+
+#Create a for loop to run iqtree
+# Get a list of all fasta files in the input folder
+all_aln_files=glob.glob(out_dir+"*fasta")
+
+# Loop through aln files and run iqtree on each (see example code and alter for my needs)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sys.exit()
 #Directory where we're doing our work
 #/scratch/forsythe/BB485_examples/Week06/phylogenomic_pipeline
 
