@@ -2,6 +2,8 @@
 
 Python code for performing a phylogenomic analysis.
 
+Updated 2026!!
+
 Breifly, our code will:
 - take fasta files as input
 - perform multiple sequence alignment
